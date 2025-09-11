@@ -1,5 +1,14 @@
+import AvatarGenerator from "./assets/components/AvatarGenerator.jsx";
+import {ToastContainer} from "react-toastify";
+
 export default function App() {
     return (
-        <h1>Hi</h1>
+        <>
+            <div
+                className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center text-white overflow-hidden animate__animated animate__fadeIn">
+                <AvatarGenerator/>
+            </div>
+            <ToastContainer/>
+        </>
     )
 }
