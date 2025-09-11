@@ -1,7 +1,8 @@
 import {useEffect, useReducer} from "react";
-import {avatarReducer, initialState} from "../reducers/avatarReducer";
+import {avatarReducer, initialState} from "../../reducers/avatarReducer";
 import SelectOption from "./SelectOption.jsx";
 import ActionButton from "./ActionButton.jsx";
+import {toast} from "react-toastify";
 
 export default function AvatarGenerator() {
     const [state, dispatch] = useReducer(avatarReducer, initialState);
@@ -9,6 +10,30 @@ export default function AvatarGenerator() {
     useEffect(() => {
         dispatch({type: "GENERATE_AVATAR"});
     }, [state.selectedOption]);
+
+    const downloadAvatar = (url) => {
+        const a = document.createElement("a");
+        a.href = url;
+        a.target = "_blank";
+        a.download = url;
+        a.click();
+        a.remove();
+    }
+
+    const handleCopy = (url) => {
+        navigator.clipboard.writeText(url);
+
+        dispatch({type: "COPY"});
+
+        toast.success("Image URL copied to clipboard!", {
+            position: "bottom-right",
+            autoClose: 1500,
+        });
+
+        setTimeout(() => {
+            dispatch({type: "RESET_COPY"});
+        }, 2000);
+    }
 
     return (
         <div
@@ -38,14 +63,14 @@ export default function AvatarGenerator() {
                 <ActionButton
                     label="Download"
                     icon="ri-download-line"
-
+                    onClick={() => downloadAvatar(state.imageUrl)}
                     variant="download"
                 />
 
                 <ActionButton
                     label={state.copied ? "Copied!" : "Copy"}
                     icon="ri-file-copy-line"
-
+                    onClick={() => handleCopy(state.imageUrl)}
                     variant="copy"
                 />
             </div>
